@@ -1,0 +1,184 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Không cho dùng hàm print ở code product
+    avoid_print: error
+
+    # Chỉ sử dụng thư viện web cho các file không phải web
+    avoid_web_libraries_in_flutter: error
+
+    # Không viết logic vào hàm createState
+    no_logic_in_create_state: error
+
+    # Không bọc Container bên ngoài
+    avoid_unnecessary_containers: warning
+linter:
+  rules:
+    # Thêm overide hàm bị ghi đè
+    - annotate_overrides
+
+    # Không trả về else rỗng
+    - avoid_empty_else
+
+    # Khuyến khích sử dụng đường dẫn tương đối
+    - avoid_relative_lib_imports
+
+    # Tránh dùng for each như 1 hàm.
+    - avoid_function_literals_in_foreach_calls
+
+    # Không gán biến khởi tạo bằng null
+    - avoid_init_to_null
+
+    # Nếu giá trị so sánh là nguyên thuỷ(không cụ thể).
+    - literal_only_boolean_expressions
+
+    # Có giá trị trùng nhau khi so sánh
+    - no_duplicate_case_values
+
+    # Không dùng chuỗi liền kề
+    - no_adjacent_strings_in_list
+
+    # Tránh dùng hàm không cần thiết
+    - unnecessary_statements
+
+    # Tránh dùng BuildContext ở hàm bất đồng bộ
+    - use_build_context_synchronously
+
+    # Hạn chế dùng dấu \
+    - avoid_escaping_inner_quotes
+
+    # Không khởi tạo trong class const
+    - avoid_field_initializers_in_const_classes
+
+    # Tránh khai báo final trong params
+    - avoid_final_parameters
+
+    # Tránh truyền thẳng kiểu boolean vào hàm
+    - avoid_positional_boolean_parameters
+
+    # Tránh sử dụng kiểu typedef 1 lần
+    - avoid_private_typedef_functions
+
+    # Không trả về kiểu null với các kiểu dữ liệu int, double, bool
+    - avoid_returning_null
+
+    # Không trả về kiểu nil cho hàm void
+    - avoid_returning_null_for_void
+
+    # Tránh trả về this từ các interface
+    - avoid_returning_this
+
+    # Biểu thức 1 tầng không cần ..
+    - avoid_single_cascade_in_expression_statements
+
+    # Tránh định nghĩa các hàm không sử dụng trong hàm tạo
+    - avoid_unused_constructor_parameters
+
+    # Async nên đi với Future
+    - avoid_void_async
+
+    # Tránh sử dụng await nếu ko phải hàm Future
+    - await_only_futures
+
+    # Tên hàm nên là UpperCamelCase
+    - camel_case_types
+
+    # Nên sử dụng kiểu gọi tháp nước.
+    - cascade_invocations
+
+    # Tên biến nên đặt kiểu lowerCamelCase
+    - constant_identifier_names
+
+    # Dùng ngoặc nhọn khi if else
+    - curly_braces_in_flow_control_structures
+
+    # Sắp xếp lại thư viện import
+    - directives_ordering
+
+    # Không import file từ 1 thư viện khác
+    - implementation_imports
+
+    # Nên gán return với phép gán nếu có thể
+    - join_return_with_assignment
+
+    # Dùng Multiline strings thay vì xuống dòng
+    - leading_newlines_in_multiline_strings
+
+    # Dùng lowercase_with_underscores với thư viện
+    - library_prefixes
+
+    # Tránh viết hơn 80 ký tự trên 1 dòng
+    - lines_longer_than_80_chars
+
+    # Thêm khoảng trắng cuối dòng nếu là adjacent strings
+    - missing_whitespace_between_adjacent_strings
+
+    # Đặt tên hàm/biến kiểu lowerCamelCase
+    - non_constant_identifier_names
+
+    # Không thêm đấu _ vào các tham số không phải private
+    - no_leading_underscores_for_local_identifiers
+
+    # Sửa kiểu trình bày nguyên thuỷ
+    - noop_primitive_operations
+    # Không truyền null làm đối số
+    - null_closures
+
+    # Không cần viết kiểu dữ dữ liệu
+    - omit_local_variable_types
+
+    # Chỉ cho throw lỗi
+    - only_throw_errors
+
+    # Không override biến
+    - empty_statements
+
+    - avoid_null_checks_in_equality_operators
+    - avoid_renaming_method_parameters
+    - avoid_return_types_on_setters
+    - avoid_types_as_parameter_names
+    - cancel_subscriptions
+    - control_flow_in_finally
+    - empty_catches
+    - empty_constructor_bodies
+    - hash_and_equals
+    - invariant_booleans
+    - iterable_contains_unrelated_type
+    - library_names
+    - list_remove_unrelated_type
+    - overridden_fields
+    - package_api_docs
+    - package_names
+    - package_prefixed_library_names
+    - prefer_adjacent_string_concatenation
+    - prefer_collection_literals
+    - prefer_conditional_assignment
+    - prefer_const_constructors
+    - prefer_contains
+    - prefer_equal_for_default_values
+    - prefer_final_fields
+    - prefer_initializing_formals
+    - prefer_interpolation_to_compose_strings
+    - prefer_is_empty
+    - prefer_is_not_empty
+    - prefer_single_quotes
+    - prefer_typing_uninitialized_variables
+    - recursive_getters
+    - slash_for_doc_comments
+    - sort_constructors_first
+    - test_types_in_equals
+    - throw_in_finally
+    - type_init_formals
+    - unawaited_futures
+    - unnecessary_brace_in_string_interps
+    - unnecessary_const
+    - unnecessary_getters_setters
+    - unnecessary_lambdas
+    - unnecessary_new
+    - unnecessary_null_aware_assignments
+    - unnecessary_this
+    - unrelated_type_equality_checks
+    - use_rethrow_when_possible
+    - valid_regexps
+    - prefer_relative_imports
