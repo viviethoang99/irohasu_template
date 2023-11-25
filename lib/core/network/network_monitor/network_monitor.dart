@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/services.dart';
@@ -18,6 +19,7 @@ class NetworkListener {
     try {
       result = await _connectivity.checkConnectivity();
     } on PlatformException catch (e) {
+      log(e.code);
       return;
     }
     return _updateConnectionStatus(result);
